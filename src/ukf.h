@@ -95,6 +95,16 @@ class UKF {
 
   // Sigma point spreading parameter
   double lambda_;
+
+  double y_init_offset;
+
+private:
+  /**
+   * Helper method for sensor measurement update
+   * @param meas_package The measurement at k+1
+   * @param n_z The dimensin of measurement
+   */
+  void UpdateSensorMeas(int n_z, Eigen::VectorXd &z, Eigen::MatrixXd &Zsig, Eigen::MatrixXd &R);
 };
 
 #endif  // UKF_H
