@@ -104,7 +104,7 @@ private:
    * @param meas_package The measurement at k+1
    * @param n_z The dimensin of measurement
    */
-  void UpdateSensorMeas(int n_z, Eigen::VectorXd &z, Eigen::MatrixXd &Zsig, Eigen::MatrixXd &R);
+  void UpdateSensorMeas(int n_z, Eigen::VectorXd &z, Eigen::MatrixXd &Zsig, Eigen::MatrixXd &R, MeasurementPackage::SensorType type);
 };
 
 #endif  // UKF_H
